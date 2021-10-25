@@ -1,0 +1,28 @@
+### 1 - Criar conta
+POST http://localhost:3000/contas
+Content-Type: application/json
+
+{
+    "name": "Marcio Mastrocola Alcantara",
+    "cpf": "04568315921",
+    "phone": "43984533220",
+    "address": "R. Dr. Lauro Mussi, 202"
+}
+
+### 2 - Alterar conta
+PUT http://localhost:3000/contas/04568315921
+Content-Type: application/json
+
+{
+    "phone": "43984533220",
+    "address": "R. Araçatuba, 500"
+}
+
+### 3 - Desativar conta
+PUT http://localhost:3000/contas/04568315921/desativar
+
+### 4 - Ativar conta
+PUT http://localhost:3000/contas/04568315921/ativar
+
+### 5 - Listar contas
+GET http://localhost:3000/contas

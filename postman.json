@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "1ef244ab-7382-48d8-bd74-d8d11c8ee3f8",
+		"name": "Contas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar conta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Marcio Mastrocola Alcantara\",\r\n    \"cpf\": {{cpf}},\r\n    \"phone\": \"43984533220\",\r\n    \"address\": \"R. Dr. Lauro Mussi, 202\",\r\n    \"createdAt\": \"23/10/2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/contas",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"contas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar conta",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\": \"47992009339\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/contas/{{cpf}}",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"contas",
+						"{{cpf}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Desativar conta",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/contas/{{cpf}}/desativar",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"contas",
+						"{{cpf}}",
+						"desativar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ativar conta",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/contas/{{cpf}}/ativar",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"contas",
+						"{{cpf}}",
+						"ativar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar contas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/contas",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"contas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
